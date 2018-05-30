@@ -117,7 +117,8 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 0;
+	padding: 10px 20px 5px 20px;
 }
 .filter-options select {
   background-color: white;
