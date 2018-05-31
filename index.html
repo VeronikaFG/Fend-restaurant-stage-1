@@ -22,16 +22,16 @@
       <div id="map" tabindex="-1" role="application" aria-label="google map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div class="filter-options" aria-label="Searching restaurant using filters">
         <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Searching restaurant using neighborhoods">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Searching restaurant using cuisines">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" aria-label="List of restaurants"></ul>
     </section>
   </main>
 
