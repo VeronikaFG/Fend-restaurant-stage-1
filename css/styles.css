@@ -255,7 +255,9 @@ nav h1 a {
   padding: 0 20px 0 20px;
   width: calc(100% - 45px);
 }
-
+#reviews-container{
+	padding: 30px;
+}
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
@@ -266,9 +268,6 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 #reviews-list li {
   background-color: #fff;
@@ -292,3 +291,10 @@ nav h1 a {
 }
 
 /* Add media queries*/
+@media screen and (max-width: 365px) {
+	#restaurants-list li {
+		min-width: 240px;
+		padding: 12px;
+		margin: 2px;
+	}
+}
