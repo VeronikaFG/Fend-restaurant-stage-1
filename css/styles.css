@@ -219,8 +219,6 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 50%;
 }
 #restaurant-name {
   color: #f18200;
@@ -251,16 +249,13 @@ nav h1 a {
   text-transform: uppercase;
 	width: 90%;
 }
-#restaurant-container, #reviews-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#restaurant-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
-	flex-wrap: wrap;
+  padding: 0 20px 0 20px;
+  width: calc(100% - 45px);
 }
+
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
