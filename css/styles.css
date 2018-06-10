@@ -18,7 +18,7 @@ body {
 }
 
 ul,
- li {
+li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
   color: #333;
@@ -98,7 +98,7 @@ nav h1 a {
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
-	text-align: center;
+  text-align: center;
 }
 
 #breadcrumb {
@@ -380,8 +380,8 @@ nav h1 a {
     order: 3;
   }
   #restaurant-img,
-    #restaurant-cuisine,
-    #restaurant-address {
+  #restaurant-cuisine,
+  #restaurant-address {
     width: 45%;
   }
 }
