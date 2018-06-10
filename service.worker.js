@@ -30,7 +30,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-/*Serve files from caches before to try network*/
+/*Serve files from caches*/
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
