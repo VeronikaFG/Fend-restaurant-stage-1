@@ -24,36 +24,22 @@ self.addEventListener('install', function(event) {
         '/img/9.jpg',
         '/img/10.jpg'
       ]);
-self.addEventListener('install', function (event) {
-  event.waitUntil(
-    caches.open(restCache)
-      .then(function (cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
-
-self.addEventListener('activate', function (event) {
-  event.waitUntil(
-    catches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          return cacheName.startsWith('Restaurant-cache-v') &&
-          cacheName != restCache;
-        }).map(function(cacheName){
-          return caches.delete(cacheName);
-        })
-      );
+    }).catch(function(error) {
+      console.log(error;
     })
   );
 });
 
 /*Serve files from caches before to try network*/
-self.addEventListener('fetch', function(event){
+self.addEventListener('fetch', function(event) {
   event.respondWith(
-    caches.match(event.request).then(function(response){
-      return response || fetch(event.request);
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request).then(function(response) {
+        return caches.open('rest-cache').then(function(cache) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      });
     })
   );
 });
