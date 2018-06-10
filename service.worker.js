@@ -25,7 +25,7 @@ self.addEventListener('install', function(event) {
         '/img/10.jpg'
       ]);
     }).catch(function(error) {
-      console.log(error;
+      console.log(error);
     })
   );
 });
