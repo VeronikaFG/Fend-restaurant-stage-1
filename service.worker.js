@@ -30,7 +30,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
-/*Serve files from caches*/
+/*Serve files and images from cache*/
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
