@@ -4,14 +4,15 @@ let restaurants,
 var map
 var markers = []
 
-/* Registration service worker*/
+/* Registration service worker */
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/service.worker.js')
   .then(function(registration) {
-    /* Registration successful*/
+    /* Registration successful */
     console.log('registration succeeded. Scope is ' + registration.scope);
   })
   .catch(function(error) {
+    /* Registration failed */
     console.log('failed registration with ' + error);
   });
 }
@@ -156,7 +157,7 @@ createRestaurantHTML = (restaurant) => {
   image.setAttribute('Alt', 'Image of restaurant - ' + restaurant.name);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
